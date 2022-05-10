@@ -1,10 +1,386 @@
+<?php
+
+    $pageUrl = strtok( (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) || isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", "?");
+    $pageTitle = "Il cantiere dei cittadini digitali ";
+    $pageDescription = "Una grande alleanza guidata da TIM per diffondere le competenze tecnologiche nel nostro Paese insieme ad aziende pubbliche, private e no profit.";
+
+    $twitterString = "#digitaltransformation" . $pageUrl;
+    $whatsappString = $pageTitle. " " . $pageUrl;
+?>
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it">
+
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $pageTitle; ?></title>
+    <meta name="description" content="<?php echo $pageDescription; ?>" />
+    <link rel="canonical" href="<?php echo $pageUrl; ?>">
+
+    <!-- CONFIGURAZIONE STATS -->
+    <script type="text/javascript">
+      var pageHref = '<?php echo $pageUrl; ?>';
+      var pageType = 'dettaglio_content';
+    </script>
+    <esi:include src='http://www.repstatic.it/cless/common/stable/js/script/tlh/traffic_light_handler.html' />
+    <script async="" onerror="try { asr_error() } catch(e) {}" onload="try { kw_tlh_ready(); } catch(e) {}" src="//oasjs.kataweb.it/adsetup.js"></script>
+    <!-- CONFIGURAZIONE STATS -->
+
+    <!-- facebook -->
+    <meta property="fb:app_id" content="182234715127717" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="<?php echo $pageTitle; ?>">
+    <meta property="og:description" content="<?php echo $pageDescription; ?>">
+    <meta property="og:image" content="<?php echo $pageUrl; ?>meta.jpg?<?php echo filemtime('./meta.jpg.jpg'); ?>">
+    <meta property="og:url" content="<?php echo $pageUrl; ?>">
+    <meta property="article:published_time" content="2020-02-14T09:00">
+    <!-- facebook -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
+    <meta name="twitter:description" content="<?php echo $pageDescription; ?>">
+    <meta name="twitter:image" content="<?php echo $pageUrl; ?>meta.jpg?<?php echo filemtime('./meta.jpg.jpg'); ?>">
+    <meta name="twitter:url" content="<?php echo $pageUrl; ?>">
+    <esi:include src='https://lab.repubblica.it/common/includes/zephr-head-free.html' />
+
   </head>
+
   <body>
-    asdasdadasd
+
+  <section class="hero_section">
+    <div class="hero_header">
+      <div class="hero_header_container">
+        <div class="hero_logo">
+          <img src="./images/content/logo.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="hero_container">
+      <div class="hero_text">
+        <h1 class="hero_title">Massimizzare l’igiene<span> minimizzando l’impatto ambientale</span></h1>
+
+        <div class="hero_description">
+          <p>L’abuso dei prodotti chimici per igienizzare gli ambienti ha impatti negativi non solo sull’ambiente, ma anche sulla nostra salute</p>
+          <p>
+            <img src=".images/content/arrow.svg" alt="">
+            La nuova frontiera fa leva sul ruolo dei batteri buoni, i <span>probiotici</span>
+          </p>
+          <div class="sub-desc">
+            in collaborazione con <span>MAST PROBIO</span>
+          </div>
+        </div>
+
+        <div class="hero_footer">
+          <div class="arrow_down">
+
+          </div>
+          <div class="social_list">
+            <img src="./images/content/fb.svg" alt="">
+            <svg width="81" height="2" viewBox="0 0 81 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.799805" y="0.5" width="80" height="1" fill="#282928"/>
+            </svg>
+            <img src="./images/content/tw.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text_section">
+    <div class="text_section_header">
+      <div class="col_left">
+        di Luigi dell'Olio
+      </div>
+      <div class="col_right"></div>
+    </div>
+
+    <div class="text_container">
+      <div class="col_left"></div>
+      <div class="col_right">
+        <p><strong>Molti di noi hanno sentito parlare dei probiotici</strong> contenuti negli yogurt per la loro capacità di ripristinare la flora batterica, generando sollievo per il nostro organismo. Meno noto invece è il loro utilizzo per igienizzare gli ambienti, puntando su basso impatto ambientale e igiene duratura.</p>
+      </div>
+    </div>
+
+    <div class="text_container">
+      <div class="col_left">
+        <h3>Elementi naturali</h3>
+      </div>
+      <div class="col_right">
+        <p><strong>Per comprendere i contorni della nuova frontiera</strong> è opportuno fare un passo indietro. Gli organismi patogeni (batteri cattivi e potenzialmente pericolosi per l’uomo) vivono dove è più sporco e, una volta individuato il luogo più adatto, proliferano a getto continuo. «Se si escludono gli ambienti sterili come le sale operatorie, tutti gli altri sono colonizzati da milioni di batteri. Per fare un esempio, anche la vita è nata da forme batteriche, che tramite metabolismo hanno portato a creare ecosistema come lo conosciamo oggi», racconta Francesco Giovanelli, responsabile ricerca e sviluppo di Mast Probio, azienda con ventennale esperienza nel settore dell’igienizzazione.</p>
+      </div>
+    </div>
+
+    <div class="text_container">
+      <div class="col_left">
+        <h3>Il paradosso della disinfezione</h3>
+      </div>
+      <div class="col_right">
+        <p><strong>Da tempo l’industria è impegnata con soluzioni per igienizzare gli ambienti</strong>, che tuttavia presentano due criticità: sono di origine chimica, e quindi con un elevato impatto in termini ambientali, che male si sposa con gli obiettivi di transizione ecologica; agiscono eliminando una parte dei batteri patogeni, quelli più forti sopravvivono e avviano una nuova contaminazione che li rende sempre più resistenti e potenzialmente nocivi.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="info_section infografica">
+
+  </section>
+
+  <section class="text_section">
+    <div class="text_container">
+      <div class="col_left"></div>
+      <div class="col_right">
+        <p>Subito dopo la disinfezione, con un normale prodotto detergente, il numero di microrganismi presenti sulla superficie da pulire si riduce drasticamente. I disinfettanti non hanno effetto residuale, quindi i microrganismi sopravvissuti, che sono spesso proprio quelli più resistenti e nocivi, già dopo pochi minuti iniziano a proliferare nuovamente rioccupando lo spazio lasciato a disposizione da quelli eliminati nella disinfezione. Spesso si ha il paradosso che dopo ogni disinfezione il numero dei microrganismi “cattivi” è più alto rispetto a quella precedente.</p>
+
+        <p>L’abuso di detergenti chimici (biocidi, disinfettanti e antibiotici) ha portato all'assuefazione dei batteri patogeni che si evolvono per sopravvivere, diventando sempre più forti, aggressivi e pericolosi. “I prodotti più diffusi sul mercato generano uno squilibrio biologico sulle superfici che ci circondano e creano dei rischi per la nostra salute provocando ed esempio infezioni alla pelle e alle vie respiratorie”, aggiunge Giovanelli.</p>
+
+        <p>Da questa consapevolezza, la ricerca dell’azienda romana ha individuato prodotti detergenti a base di probiotici “che ottengono un’igiene più profonda, duratura e sicura, senza l'utilizzo di agenti chimici”, spiega il responsabile ricerca e sviluppo. L’innovazione si basa sull’aggiunta di microrganismi vivi (probiotici) all’interno delle soluzioni detergenti. Appena applicati, i probiotici analizzano lo sporco presente sulla superficie e producono gli enzimi specifici per decomporre e metabolizzare lo sporco.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="info_section numbers">
+    <div class="numbers_container">
+      <div class="number_card legenda">
+        <h3>igiene sostenibile</h3>
+        <div class="levels">
+          <div class="level_row">
+            <span class="level green"></span>
+            <p>Livello ambientale </p>
+          </div>
+          <div class="level_row">
+            <span class="level purple"></span>
+            <p>Livello economico</p>
+          </div>
+          <div class="level_row">
+            <span class="level red"></span>
+            <p>Livello sanitario</p>
+          </div>
+        </div>
+      </div>
+      <div class="number_card green">
+        <h2 class="num">– 29,33 <span>%</span></h2>
+        <p>La riduzione dei consumi idrici ed elettrici</p>
+      </div>
+      <div class="number_card green">
+        <h2 class="num">– 45 <span>%</span></h2>
+        <p>Riduzione nel consumo  di sostanze chimiche</p>
+      </div>
+
+      <div class="number_card green">
+        <h2 class="num">– 35 <span>%</span></h2>
+        <p>La riduzione dell’impronta di carbonio</p>
+      </div>
+
+      <div class="number_card purple">
+        <h2 class="num">– 51 <span>%</span></h2>
+        <p>La riduzione del consumo di  farmaci antimicrobici</p>
+      </div>
+      <div class="number_card purple">
+        <h2 class="num">– 79 <span>%</span></h2>
+        <p>La riduzione dei consumi  idrici ed elettrici</p>
+      </div>
+      <div class="number_card purple">
+        <h2 class="num">– 320 <span>MLN €</span></h2>
+        <p>I risparmi in <strong>5 anni</strong> negli ospedali  italiani di trattamenti farmacologici</p>
+      </div>
+      <div class="number_card purple">
+        <h2 class="num">– 60 <span>%</span></h2>
+        <p>Riduzione del costo della terapia antimicrobica per pazienti con ICA</p>
+      </div>
+
+      <div class="number_card red">
+        <h2 class="num">– 70,96 <span>%</span></h2>
+        <p>La riduzione dei patogeni rispetto ai metodi tradizionali</p>
+      </div>
+      <div class="number_card red">
+        <h2 class="num">– 70,99 <span>%</span></h2>
+        <p>La riduzione dei principali geni di resistenza agli antibiotici</p>
+      </div>
+      <div class="number_card red">
+        <h2 class="num">– 52 <span>%</span></h2>
+        <p>La riduzione delle Infenzioni  Correlate all’Assistenza</p>
+      </div>
+      <div class="number_card red">
+        <h2 class="num">– 99,9 <span>%</span></h2>
+        <p>La riduzione della carica virale</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="text_section">
+    <div class="text_container">
+      <div class="col_left"></div>
+      <div class="col_right">
+        <p>La superficie trattata viene colonizzata da parte dei probiotici (batteri buoni) che si riproducono e impediscono una nuova contaminazione patogena, rendendo l'ambiente più sano e più sicuro per diversi giorni. In pratica i probiotici, (batteri buoni) isolano i batteri cattivi sulle superfici, li eliminano e ne prendono il posto.</p>
+
+        <p>Ripristinando un ambiente sano, equilibrato e sicuro questo ha consentito all’azienda di mettere a punto una linea composta da prodotti specifici per la pulizia di tutti gli ambienti: domestici (soluzioni per la casa e gli amici a quattro zampe); sportivi (in particolare per il fitness); professionali (studi medici e dentistici); lavorativi (servizi mirati per igienizzare condotte dell’aria condizionata, torri evaporative e ambienti indoor ad alta frequentazione come uffici e centri commerciali.</p>
+      </div>
+    </div>
+    <div class="text_container">
+      <div class="col_left">
+        <h3>La “ricetta” probiotica</h3>
+      </div>
+      <div class="col_right">
+        <p><strong>Il metodo probiotico è frutto di scoperte e sperimentazioni</strong> che hanno richiesto anni. In primo luogo si è proceduto con la selezione dei batteri “buoni”, che sono stati inseriti e stabilizzati all’interno dei prodotti igienizzanti. nel momento in cui le soluzioni a base di probiotici vengono applicate sulle superfici, i probiotici producono enzimi attivando il ciclo di pulizia e protezione. Gli enzimi prodotti rompono lo sporco trasformandolo in microparticelle, i probiotici lo digeriscono e di riproducono, fino ad occupare tutto lo spazio disponibile sulla superficie. In questo modo i batteri nocivi vengono isolati e muoiono. La superficie rimane sicura e protetta per diversi giorni perche’ la colonia di batteri buoni evita la formazione di nuovi batteri cattivi.</p>
+
+        <p>Il sistema probiotico è estremamente efficace per eliminare alla fonte le sostanze organiche, responsabili degli odori sgradevoli e le infezioni batteriche. Infine i prodotti a base di probiotici non solo non hanno un impatto positivo sull’ambiente, perché sono naturali e sostituiscono l’utilizzo di agenti chimici nocivi, con risultati migliori, ma continuano la loro azione detergente e biodegradante anche dopo il primo utilizzo. L’azione dei probiotici continua anche nei tubi di scarico.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid_metodo">
+    <div class="metodo_card black first">
+      <div class="metodo_card_container">
+        <h3>il metodo probiotico</h3>
+      </div>
+      <img src="./images/content/metodo_arrow_right.svg" alt="">
+    </div>
+    <div class="metodo_card">
+      <div class="metodo_card_container">
+        <div class="metodo_count">
+          1
+        </div>
+        <p>Selezione dei ceppi di batteri benefici  (probiotici)</p>
+      </div>
+      <img src="./images/content/metodo_arrow_right.svg" alt="">
+    </div>
+
+
+    <div class="metodo_card">
+      <div class="metodo_card_container">
+        <div class="metodo_count">
+          2
+        </div>
+        <p>Concentrazione dei  batteri benefici e  stabilizzazione in prodotti di detergenza</p>
+      </div>
+      <img src="./images/content/metodo_arrow_right.svg" alt="">
+    </div>
+
+    <div class="metodo_card purple">
+      <div class="metodo_card_container">
+        <div class="metodo_count">
+          3
+        </div>
+        <p>Durante la diluizione i  probiotici capaci di  digerire lo sporco vengono risvegliati</p>
+      </div>
+    </div>
+
+    <div class="metodo_card white">
+      <div class="metodo_card_container">
+        <div class="metodo_count">
+          7
+        </div>
+        <p>I batteri, gli enzimi  e lo sporco digeri to ritornano in natura</p>
+        <span>in un ciclo naturale che tutela l’ambiente,  a differenza dei prodotti chimici</span>
+      </div>
+      <img src="./images/content/metodo_arrow_left.svg" alt="">
+    </div>
+
+    <div class="metodo_card white">
+      <div class="metodo_card_container">
+        <div class="metodo_count">
+          6
+        </div>
+        <p>I batteri benefici  (probiotici) digeriscono  lo sporco</p>
+      </div>
+      <img src="./images/content/metodo_arrow_left.svg" alt="">
+    </div>
+
+    <div class="metodo_card white">
+      <div class="metodo_card_container">
+        <div class="metodo_count">
+          5
+        </div>
+        <p>Gli enzimi prodotti  rompono lo sporco  in micro particelle</p>
+      </div>
+      <img src="./images/content/metodo_arrow_left.svg" alt="">
+    </div>
+
+    <div class="metodo_card purple">
+      <div class="metodo_card_container">
+        <div class="metodo_count">
+          4
+        </div>
+        <p>I probiotici applicati alle  superfici producono enzimi, attivando il ciclo di  pulizia e protezione</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section_split">
+    <div class="section_split_container">
+      <div class="split_header">
+        <div class="header_text"></div>
+        <div class="header_title">la scelta sostenibile</div>
+      </div>
+
+      <div class="split_col_container">
+        <div class="split_text">
+          <p><strong>Con i sistemi tradizionali, a base di sostanze chimiche</strong>, dannose per l'ambiente e per l'uomo, la carica batterica viene rimossa nel momento in cui si effettua la pulizia ma riprende a crescere subito dopo. Invece con l'utilizzo dei detergenti a base di probiotici la carica batterica viene rimossa e si mantiene bassa nel tempo, rendendo l'ambiente più sano e più sicuro per diversi giorni. I probiotici, nel momento dell'applicazione, analizzano il tipo di batteri patogeni presenti sulla superficie e producono gli enzimi specifici per distruggerli e impedirne la riproduzione.</p>
+
+          <p>La colonizzazione della superficie da parte dei probiotici impedisce una nuova contaminazione patogena e garantisce un'igiene molto più profonda e duratura, in modo completamente naturale e senza danni per l'uomo e l'ambiente. La linea probiotica, selezionata da Mast Probio, prevede una vasta gamma di prodotti, completamente naturali ed altamente efficaci, che garantiscono un benessere ottimale per l'uomo, gli animali e l'ambiente che li circonda, in modo del tutto naturale e sostenibile.</p>
+        </div>
+        <div class="split_title"></div>
+      </div>
+
+    </div>
+    <div class="section_split_container">
+      <div class="split_header reverse">
+        <div class="header_text"></div>
+        <div class="header_title">i batteri</div>
+      </div>
+
+      <div class="split_col_container reverse">
+        <div class="split_text">
+          <p>Il batterio è un organismo unicellulare che non può essere osservato a occhio nudo ed è in grado di riprodursi molto rapidamente in condizioni favorevoli. Nella vita quotidiana siamo circondati da innumerevoli microrganismi: fortunatamente la maggior parte di questi è innocua, ma alcuni possono causare malattie negli esseri viventi e nell’uomo; questi batteri sono definiti patogeni. La scoperta di antibiotici e disinfettanti ha messo a disposizione un’arma nella lotta contro i batteri patogeni ma questi, nel tempo, hanno sviluppato una resistenza sempre maggiore.</p>
+
+          <p>In natura i microrganismi si organizzano in comunità note come microbioma presenti nel suolo, aria, acqua, superfici, animali, piante e anche sull’uomo. Queste comunità possono essere molto diverse e molto complesse ma tutte hanno un solo obiettivo: la sopravvivenza e la proliferazione. Sulle superfici questo tipo di comunità è noto anche come biofilm e crea effetti spesso negativi sugli esseri umani come le infezioni o i cattivi odori. I prodotti a base di probiotici contribuiscono a creare sulle superfici un biofilm sano, protettivo e sicuro che si mantiene stabile per diversi giorni.</p>
+        </div>
+        <div class="split_title"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="arrow-top">
+        <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.4181 27.1818L12.5659 27.1818L12.5659 4.91193L21.4636 13.8097L22.9466 12.3011L11.492 0.846589L0.011897 12.3011L1.53321 13.8097L10.4181 4.91193L10.4181 27.1818Z" fill="white" />
+        </svg>
+      </div>
+      <div class="footer-info">
+        <div class="col-footer">
+          <span>A cura di</span>
+          <a target="_blank" href="https://www.gedivisual.it/">Gedi Visual</a>
+        </div>
+        <div class="col-footer">
+          In collaborazione con
+          <img src="./assets/logo-tim.svg" alt="">
+        </div>
+        <div class="col-footer">
+          <span>Grafica e sviluppo:</span>
+ <a target="_blank" href="https://www.beamediacompany.com/">Bea</a> x Gedi
+        </div>
+      </div>
+      <div class="footer-copy">
+        <esi:include src="https://lab.gedidigital.it/utils/includes/footer/stampa_nazionale.html" />
+      </div>
+    </div>
+  </footer>
+
+
+    <esi:include src='http://www.repstatic.it/cless/common/stable/include/wt/wt.html' />
+    <esi:include src='http://www.repstatic.it/cless/common/stable/include/nielsen/nielsen.html' />
   </body>
+
 </html>

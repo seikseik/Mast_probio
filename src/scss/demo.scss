@@ -1,0 +1,192 @@
+.hero_section{
+  height: calc(100vh - 24px);
+  display: flex;
+  flex-direction: column;
+  margin-bottom:$space;
+}
+.hero_header{
+  padding: $space;
+  padding-bottom: 0;
+  background: $viola;
+  .hero_logo{
+    border-bottom:$border;
+    padding: $spacing*2;
+  }
+  .hero_header_container{
+    border:$border;
+    border-bottom:none;
+    padding-bottom: $spacing*4;
+    img{
+      width:200px;
+    }
+  }
+}
+.hero_container{
+  margin: 0 $space;
+  padding: $space;
+  background: $white;
+  border: $border;
+  border-top:none;
+  height: 100%;
+  .hero_text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.text_section{
+  margin: 0 $space;
+  border: $border;
+  border-top:0;
+  .text_section_header{
+    display: flex;
+    border-top: $border;
+    .col_left{
+      width:25%;
+      padding: 10px;
+      background: $viola;
+      text-align: center;
+      color:white;
+      border-right: $border;
+      border-bottom: $border;
+    }
+    .col_right{
+      width:75%;
+      padding: 10px;
+      background: $black;
+    }
+  }
+}
+.text_container{
+  display: flex;
+  .col_left{
+    width:25%;
+    padding: $spacing*2;
+    background: $white;
+    border-right:$border;
+    text-align: right;
+  }
+  .col_right{
+    width:75%;
+    padding: $spacing*2;
+  }
+}
+
+
+.info_section{
+  margin: 0 $space;
+  border-left: $border;
+  border-top: 0;
+  &.numbers{
+    .numbers_container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+.number_card{
+  padding: $space*2 $spacing;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom:$border;
+  border-right: $border;
+  &.legenda{
+    background: $black;
+    color:white;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    border-top: $border;
+    width:100%;
+    height: $spacing;
+  }
+  &.green:after{background: $verde;}
+  &.purple:after{background: $viola;}
+  &.red:after{background: $rosso;}
+}
+
+
+.grid_metodo{
+  margin: 0 $space;
+  margin-bottom: $space*2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-left: $border;
+}
+
+.metodo_card{
+  padding: $space $spacing*3;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: $border;
+  border-bottom:$border;
+  img{
+    position: absolute;
+    top:calc(50% - 18px);
+    right:-18px;
+    z-index: 2;
+  }
+  &.black{
+    background: $black;
+    color:white;
+  }
+  &.purple{
+    background:$viola;
+  }
+  &.white{
+    background: $white;
+  }
+}
+
+.section_split{
+  margin: 0 $space;
+  border:$border;
+  border-top:0;
+  .reverse{
+    flex-direction: row-reverse;
+    .split_title{
+      border-left: 0 !important;
+      border-right: $border;
+    }
+  }
+  .split_header{
+    display: flex;
+    border-bottom:$border;
+    border-top:$border;
+    .header_text{
+      width:75%;
+      padding: 10px;
+      background: $white;
+    }
+    .header_title{
+      width:25%;
+      text-align: center;
+      padding: 10px;
+      background: $black;
+      color:white;
+    }
+  }
+  .split_col_container{
+    display: flex;
+    .split_text{
+      width:75%;
+      padding: $spacing*2;
+    }
+    .split_title{
+      width:25%;
+      background: $viola;
+      border-left: $border;
+    }
+  }
+}
