@@ -26,7 +26,7 @@
       var pageType = 'dettaglio_content';
     </script>
     <esi:include src='http://www.repstatic.it/cless/common/stable/js/script/tlh/traffic_light_handler.html' />
-    <script async="" onerror="try { asr_error() } catch(e) {}" onload="try { kw_tlh_ready(); } catch(e) {}" src="//oasjs.kataweb.it/adsetup.js"></script>
+    <!-- <script async="" onerror="try { asr_error() } catch(e) {}" onload="try { kw_tlh_ready(); } catch(e) {}" src="//oasjs.kataweb.it/adsetup.js"></script> -->
     <!-- CONFIGURAZIONE STATS -->
 
     <!-- facebook -->
@@ -49,6 +49,9 @@
     <meta name="twitter:url" content="<?php echo $pageUrl; ?>">
     <esi:include src='https://lab.repubblica.it/common/includes/zephr-head-free.html' />
 
+
+    <link rel="stylesheet" href="https://use.typekit.net/psq1tig.css">
+
   </head>
 
   <body>
@@ -63,16 +66,19 @@
     </div>
     <div class="hero_container">
       <div class="hero_text">
-        <h1 class="hero_title">Massimizzare l’igiene<span> minimizzando l’impatto ambientale</span></h1>
 
-        <div class="hero_description">
-          <p>L’abuso dei prodotti chimici per igienizzare gli ambienti ha impatti negativi non solo sull’ambiente, ma anche sulla nostra salute</p>
-          <p>
-            <img src=".images/content/arrow.svg" alt="">
-            La nuova frontiera fa leva sul ruolo dei batteri buoni, i <span>probiotici</span>
-          </p>
-          <div class="sub-desc">
-            in collaborazione con <span>MAST PROBIO</span>
+        <div class="hero_title_section">
+          <h1>Massimizzare l’igiene<span> minimizzando l’impatto ambientale</span></h1>
+
+          <div class="hero_description">
+            <p>L’abuso dei prodotti chimici per igienizzare gli ambienti ha impatti negativi non solo sull’ambiente, ma anche sulla nostra salute</p>
+            <p>
+              <img src=".images/content/arrow.svg" alt="">
+              La nuova frontiera fa leva sul ruolo dei batteri buoni, i <span>probiotici</span>
+            </p>
+            <div class="sub-desc">
+              in collaborazione con <span>MAST PROBIO</span>
+            </div>
           </div>
         </div>
 
@@ -279,7 +285,7 @@
           7
         </div>
         <p>I batteri, gli enzimi  e lo sporco digeri to ritornano in natura</p>
-        <span>in un ciclo naturale che tutela l’ambiente,  a differenza dei prodotti chimici</span>
+        <div class="small_text">in un ciclo naturale che tutela l’ambiente,  a differenza dei prodotti chimici</div>
       </div>
       <img src="./images/content/metodo_arrow_left.svg" alt="">
     </div>
@@ -350,32 +356,28 @@
   </section>
 
 
-
   <footer>
-    <div class="footer-container">
-      <div class="arrow-top">
-        <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10.4181 27.1818L12.5659 27.1818L12.5659 4.91193L21.4636 13.8097L22.9466 12.3011L11.492 0.846589L0.011897 12.3011L1.53321 13.8097L10.4181 4.91193L10.4181 27.1818Z" fill="white" />
-        </svg>
+    <div class="footer_top">
+      <div class="footer_col">
+        <h5>UNA PRODUZIONE</h5>
+        <a target="_blank" href="https://www.gedivisual.it/">Gedi Visual</a>
       </div>
-      <div class="footer-info">
-        <div class="col-footer">
-          <span>A cura di</span>
-          <a target="_blank" href="https://www.gedivisual.it/">Gedi Visual</a>
-        </div>
-        <div class="col-footer">
-          In collaborazione con
-          <img src="./assets/logo-tim.svg" alt="">
-        </div>
-        <div class="col-footer">
-          <span>Grafica e sviluppo:</span>
- <a target="_blank" href="https://www.beamediacompany.com/">Bea</a> x Gedi
-        </div>
+      <div class="footer_col">
+        <h5>IN COLLABORAZIONE CON</h5>
+        <a target="_blank" href="https://www.gedivisual.it/">Gedi Visual</a>
       </div>
-      <div class="footer-copy">
+      <div class="footer_col">
+        <h5>DESIGN + SVILUPPO</h5>
+        <a target="_blank" href="https://www.beamediacompany.com/">Bea</a> x Gedi
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="footer_bottom_container">
         <esi:include src="https://lab.gedidigital.it/utils/includes/footer/stampa_nazionale.html" />
       </div>
     </div>
+
   </footer>
 
 

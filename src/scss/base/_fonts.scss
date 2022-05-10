@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Mattone";
+  src: url("../fonts/Mattone-150.woff") format("woff"),
+       url("../fonts/Mattone-150.woff2") format("woff2");
+}
+
+$aktiv: "aktiv-grotesk",sans-serif;
+$mat: "Mattone", sans-serif;
+
+$size_title: 5vw;
+$size_heading: 16px;
+$size_text: 20px;
+$size_small: 14px;
+
+@mixin heading{
+  font-family: "Mattone";
+  text-transform: uppercase;
+  font-size: $size_heading;
+}
+
+@mixin hero_title{
+  font-size: $size_title;
+  line-height: 1.2;
+  font-family: $mat;
+  span{color:$viola;}
+}
+
+body{
+  font-family: $aktiv;
+  font-size: $size_text;
+}
+
+.text_container{
+  line-height: 1.6;
+}

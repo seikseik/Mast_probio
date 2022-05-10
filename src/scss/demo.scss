@@ -32,8 +32,26 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding: $space 0;
+    h1{
+      @include hero_title;
+      margin-bottom: $space;
+    }
+
+    .hero_description{
+      line-height: 1.6;
+      span{color: $verde;}
+      .sub-desc{
+        margin-top: $space;
+        font-family: $mat;
+        text-transform: uppercase;
+        font-size: $size_small;
+      }
+    }
   }
 }
+
 
 .text_section{
   margin: 0 $space;
@@ -50,6 +68,7 @@
       color:white;
       border-right: $border;
       border-bottom: $border;
+      @include heading;
     }
     .col_right{
       width:75%;
@@ -62,14 +81,32 @@
   display: flex;
   .col_left{
     width:25%;
-    padding: $spacing*2;
+    padding: 0 $space;
     background: $white;
     border-right:$border;
     text-align: right;
+    @include heading;
+    h3{
+      position: relative;
+      &:after{
+        content: "";
+        position: absolute;
+        right: -36px;
+        height: 1px;
+        background: black;
+        width: 25px;
+        top: 12px;
+      }
+    }
   }
   .col_right{
     width:75%;
-    padding: $spacing*2;
+    padding: $space*2 $spacing*2;
+    p:not(:last-child){margin-bottom: $space*2;}
+    p{max-width: 900px; margin: 0 auto;}
+    strong{
+      font-weight: 600;
+    }
   }
 }
 
@@ -95,9 +132,25 @@
   text-align: center;
   border-bottom:$border;
   border-right: $border;
+
+  .num{
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: $spacing*2;
+    span{
+      font-size: 16px;
+    }
+  }
+
+  p{
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
   &.legenda{
     background: $black;
     color:white;
+    h3{@include heading;}
   }
   &:after{
     content: "";
@@ -122,7 +175,7 @@
 }
 
 .metodo_card{
-  padding: $space $spacing*3;
+  padding: $space*2 $spacing*4;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -140,12 +193,35 @@
   &.black{
     background: $black;
     color:white;
+    @include heading;
   }
   &.purple{
     background:$viola;
   }
   &.white{
     background: $white;
+  }
+  .metodo_count{
+    width:fit-content;
+    margin: 0 auto;
+    margin-bottom: $spacing*2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $black;
+    width:22px;
+    height: 22px;
+    padding: 3px;
+    border-radius: 100%;
+    color:white;
+    font-family: $mat;
+    font-size: 12px;
+    line-height: 1;
+  }
+  .small_text{
+    font-size: $size_small;
+    line-height: 1.2;
+    margin-top: $spacing;
   }
 }
 
@@ -174,6 +250,7 @@
       text-align: center;
       padding: 10px;
       background: $black;
+      @include heading;
       color:white;
     }
   }
@@ -181,12 +258,46 @@
     display: flex;
     .split_text{
       width:75%;
-      padding: $spacing*2;
+      padding: $space*3 $spacing*2;
+      line-height: 1.6;
+      p:not(:last-child){margin-bottom: $space*2;}
+      p{max-width: 900px; margin: 0 auto;}
     }
     .split_title{
       width:25%;
       background: $viola;
       border-left: $border;
     }
+  }
+}
+
+.footer_top{
+  margin: 0 $space;
+  margin-top: $space*3;
+  border:$border;
+  border-bottom: 0;
+  display: flex;
+  .footer_col{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    &:first-child{
+      text-align: left;
+    }
+    &:last-child{
+      text-align: right;
+    }
+  }
+}
+.footer_bottom{
+  background: $black;
+  .footer_bottom_container{
+    padding: $space;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    text-align: center;
   }
 }
