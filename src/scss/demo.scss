@@ -282,16 +282,8 @@ canvas{
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
-  &.infografica{
-    border-right: 1px solid $black;
-    border-bottom:1px solid $black;
-    img, svg{
-      min-width: 100%;
-      height: auto;
-      padding: 0 $spacing*4
-    }
-  }
 }
+
 
 
 .levels{
@@ -324,7 +316,7 @@ canvas{
   text-align: center;
   border-bottom:$border;
   border-right: $border;
-  min-height: 22vh;
+  min-height: 25vh;
   .num{
     font-size: 40px;
     font-weight: lighter;
@@ -365,15 +357,16 @@ canvas{
 }
 
 .metodo_card{
-  padding: $space*2 $spacing*4;
+  padding: $space*2 $spacing*5;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   border-right: $border;
   border-bottom:$border;
+  min-height: 25vh;
   img{
     position: absolute;
     top:calc(50% - 18px);
@@ -384,6 +377,7 @@ canvas{
     background: $black;
     color:white;
     @include heading;
+    justify-content: center;
   }
   &.purple{
     background:$verde;
@@ -391,10 +385,14 @@ canvas{
   &.white{
     background: $white;
   }
+  .metodo_card_container{
+    position: relative;
+    font-size: 20px;
+  }
   .metodo_count{
     width:fit-content;
     margin: 0 auto;
-    margin-bottom: $spacing*2;
+    margin-bottom: $spacing*3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -414,6 +412,22 @@ canvas{
     margin-top: $spacing;
   }
 }
+
+
+
+.infografica{
+  border-right: 1px solid $black;
+  border-bottom:1px solid $black;
+  display: flex;
+
+  img, svg{
+    min-width: 100%;
+    height: auto;
+    padding: 0 4vw
+  }
+
+}
+
 
 .section_split{
   margin: 0 $space;
@@ -541,8 +555,34 @@ canvas{
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgb(0,0,0);
-  background-color: rgba(36,38,47,0.4);
+  background-color: $black;
+  .modal_container{
+    height: 100vh;
+    overflow: scroll;
+    .text_container{
+      display: flex;
+      height: 100%;
+      .col_left{
+        background: $black;
+        color:$white;
+        padding: $space*6 $spacing;
+        position: relative;
+        h3{position: absolute; top:$space*2; left: $spacing*2; &:after{content: none}}
+      }
+      .col_right{
+        background: $white;
+        color:$black;
+        border-right:24px solid $black;
+        padding-top: $space*6;
+      }
+    }
+    .close{
+      position: absolute;
+      top:$space*2;
+      right: -$spacing;
+      cursor: pointer;
+    }
+  }
 }
 
 
@@ -553,13 +593,23 @@ canvas{
   border:$border;
   border-bottom: 0;
   display: flex;
+  background: $white;
   .footer_col{
     flex:1;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    padding: $space $spacing*2;
+    h5{
+      font-size: 14px;
+      margin-bottom: $space;
+    }
+    .footer_col_content{
+      @include heading;
+      font-size: $size_text;
+      a{color:$black;}
+    }
     &:first-child{
       text-align: left;
     }
@@ -568,12 +618,23 @@ canvas{
     }
   }
 }
+
 .footer_bottom{
   background: $black;
   .footer_bottom_container{
-    padding: $space;
+    margin: 0 $space;
+    padding: $spacing*2 0;
     border-left: 1px solid white;
     border-right: 1px solid white;
     text-align: center;
+    .footer_bottom_content{
+      padding: $spacing*2;
+      border-top:1px solid $white;
+      width:100%;
+      @include heading;
+      font-size: 14px;
+      color: $white;
+      a{color:$white}
+    }
   }
 }
