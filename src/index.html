@@ -1,10 +1,9 @@
 <?php
 
     $pageUrl = strtok( (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) || isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", "?");
-    $pageTitle = "Il cantiere dei cittadini digitali ";
-    $pageDescription = "Una grande alleanza guidata da TIM per diffondere le competenze tecnologiche nel nostro Paese insieme ad aziende pubbliche, private e no profit.";
+    $pageTitle = "L’abuso dei prodotti chimici per igienizzare gli ambienti ha impatti negativi non solo sull’ambiente, ma anche sulla nostra salute. La nuova frontiera fa leva sul ruolo dei batteri buoni, i probiotici.";
 
-    $twitterString = "#digitaltransformation" . $pageUrl;
+    $twitterString = "" . $pageUrl;
     $whatsappString = $pageTitle. " " . $pageUrl;
 ?>
 
@@ -35,9 +34,9 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="<?php echo $pageTitle; ?>">
     <meta property="og:description" content="<?php echo $pageDescription; ?>">
-    <meta property="og:image" content="<?php echo $pageUrl; ?>meta.jpg?<?php echo filemtime('./meta.jpg.jpg'); ?>">
+    <meta property="og:image" content="<?php echo $pageUrl; ?>meta.jpg?<?php echo filemtime('./meta.png'); ?>">
     <meta property="og:url" content="<?php echo $pageUrl; ?>">
-    <meta property="article:published_time" content="2020-02-14T09:00">
+    <meta property="article:published_time" content="2022-05-20T09:00">
     <!-- facebook -->
 
     <!-- twitter -->
@@ -45,7 +44,7 @@
     <meta name="twitter:site" content="" />
     <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
     <meta name="twitter:description" content="<?php echo $pageDescription; ?>">
-    <meta name="twitter:image" content="<?php echo $pageUrl; ?>meta.jpg?<?php echo filemtime('./meta.jpg.jpg'); ?>">
+    <meta name="twitter:image" content="<?php echo $pageUrl; ?>meta.jpg?<?php echo filemtime('./meta.png'); ?>">
     <meta name="twitter:url" content="<?php echo $pageUrl; ?>">
     <esi:include src='https://lab.repubblica.it/common/includes/zephr-head-free.html' />
 
