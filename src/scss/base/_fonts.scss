@@ -9,7 +9,7 @@ $mat: "Mattone", sans-serif;
 
 $size_title: 5vw;
 $size_heading: 16px;
-$size_text: 20px;
+$size_text: 22px;
 $size_small: 14px;
 
 @mixin heading{
@@ -22,7 +22,7 @@ $size_small: 14px;
   font-size: $size_title;
   line-height: 1.2;
   font-family: $mat;
-  span{color:$viola;}
+  span{color:$verde;}
 }
 
 body{

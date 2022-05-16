@@ -88,5 +88,9 @@
     "deploy": "gh-pages -d dist"
   },
   "target": "web",
-  "dependencies": {}
+  "dependencies": {
+    "marquee3000": "^1.1.1",
+    "matter-js": "^0.18.0",
+    "gsap": "npm:@gsap/member@^3.10.4"
+  }
 }
