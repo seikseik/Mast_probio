@@ -1,9 +1,7 @@
 import image from '../images/content/face.png'
 
-var w = window.innerWidth/3;
-var h = window.innerHeight  - 100;
-const numCircles = 80;
 
+const numCircles = 80;
 let ground;
 let wall1;
 let wall2;
@@ -12,18 +10,22 @@ const content = document.querySelector('.hero_animation');
 
 let elements = [];
 
-// window.addEventListener('resize', (e) => {
-//   w = window.innerWidth;
-//   h = window.innerHeight;
-//   engine.render.canvas.width = w;
-//   engine.render.canvas.height = h;
-//
-//   Matter.Body.setPosition(wall2, Matter.Vector.create(w + 30, h * .5));
-//   Matter.Body.setPosition(ground, Matter.Vector.create(w * .5, h + 30));
-// });
+let w = content.offsetWidth;
+let h = content.offsetHeight;
+
+window.addEventListener('resize', (e) => {
+
+  engine.render.canvas.width = w;
+  engine.render.canvas.height = h;
+
+  Matter.Body.setPosition(wall2, Matter.Vector.create(w + 30, h * .5));
+  Matter.Body.setPosition(ground, Matter.Vector.create(w * .5, h + 30));
+
+});
 
 // create a Matter.js engine
 var engine = Matter.Engine.create(content, {
+
   render: {
     options: {
       width: w,
@@ -34,6 +36,7 @@ var engine = Matter.Engine.create(content, {
   }
 });
 
+
 window.engine = engine;
 
 var mouseConstraint = Matter.MouseConstraint.create(engine, {
@@ -43,6 +46,7 @@ var mouseConstraint = Matter.MouseConstraint.create(engine, {
     }
   }
 });
+
 
 // create two boxes and a ground
 for(var i = 0; i < numCircles; i++)
@@ -57,15 +61,19 @@ for(var i = 0; i < numCircles; i++)
   if(multiplier > 200) multiplier = 200
   var r = base
   elements.push(Matter.Bodies.circle(x, y, r, {
+
     render: {
       sprite: {
         texture: image,
-        xScale: (r / (245/2)) + 0.6,
-        yScale: (r / (227/2)) + 0.6
+        xScale: 0.9,
+        yScale: 0.9
       }
     }
   }));
+
 }
+
+
 ground = Matter.Bodies.rectangle(w/2, h+30, w*5., 60, { isStatic: true });
 wall1 = Matter.Bodies.rectangle(-30, h/2, 60, h*2, { isStatic: true });
 wall2 = Matter.Bodies.rectangle(w+30, h/2, 60, h*2, { isStatic: true });

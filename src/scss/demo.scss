@@ -1,8 +1,8 @@
 strong{font-weight: 600;}
 canvas{
-  width:100%;
+  // width:100%;
+  // height: 100%;
   cursor: pointer;
-  height: 100%;
 }
 
 .hero_section{
@@ -116,6 +116,7 @@ canvas{
     .hero_description{
       line-height: 1.6;
       a{color: $verde;}
+      span{font-weight: 600; white-space: nowrap;}
       .arrow_row{display: flex;align-items: center; margin: $spacing; img{margin-right: $spacing;}}
       .sub-desc{
         margin-top: $space;
@@ -132,6 +133,7 @@ canvas{
   }
   .hero_animation{
     width:33.33%;
+    overflow: hidden;
   }
   @media screen and (max-width: 768px) {
     display: flex;
@@ -734,6 +736,12 @@ canvas{
   }
   .number_card:after{
     content: none;
+  }
+
+  .hero_container .hero_text .hero_description .arrow_row{
+    display: inline-block;
+    margin-left: 0;
+    img{display: none;}
   }
 
   .text_section{
