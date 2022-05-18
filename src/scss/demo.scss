@@ -116,7 +116,7 @@ canvas{
     .hero_description{
       line-height: 1.6;
       a{color: $verde;}
-      span{font-weight: 600; white-space: nowrap;}
+      span{font-weight: 600; white-space: nowrap; line-height: normal; margin-left: $spacing/2;}
       .arrow_row{display: flex;align-items: center; margin: $spacing; img{margin-right: $spacing;}}
       .sub-desc{
         margin-top: $space;
@@ -390,6 +390,7 @@ canvas{
   border-bottom:$border;
   border-right: $border;
   min-height: 25vh;
+  min-width: 25%;
   .num{
     font-size: 40px;
     font-weight: lighter;
@@ -444,6 +445,15 @@ canvas{
   border-right: $border;
   border-bottom:$border;
   min-height: 25vh;
+  min-width: 25%;
+  &:hover{
+    background: $black !important;
+    color:$white !important;
+    .metodo_count{
+      background: $white;
+      color:$black;
+    }
+  }
   img{
     position: absolute;
     top:calc(50% - 18px);
@@ -496,7 +506,10 @@ canvas{
   border-right: 1px solid $black;
   border-bottom:1px solid $black;
   display: flex;
-
+  height: fit-content;
+  .star{
+    opacity: 0;
+  }
   img, svg{
     min-width: 100%;
     height: auto;
@@ -644,7 +657,19 @@ canvas{
         color:$white;
         padding: $space*6 $spacing;
         position: relative;
-        h3{position: absolute; top:$space*2; left: $spacing*2; &:after{content: none}}
+        h4{position: absolute; top:$space*2; font-size: 12px; left: $spacing*2; &:after{content: none}}
+        h3{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          &:after{
+            content: none;
+          }
+          svg{
+            margin-left: $spacing*2;
+            margin-right: -25px;
+          }
+        }
       }
       .col_right{
         background: $white;
@@ -939,6 +964,9 @@ canvas{
             h4{
               font-size: 11px;
               margin-right: $spacing;
+              position: relative;
+              top:unset;
+              left: unset;
             }
             h3{
               position: relative;

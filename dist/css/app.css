@@ -343,6 +343,8 @@ canvas {
 .hero_container .hero_text .hero_description span {
   font-weight: 600;
   white-space: nowrap;
+  line-height: normal;
+  margin-left: 4px;
 }
 .hero_container .hero_text .hero_description .arrow_row {
   display: -webkit-box;
@@ -701,6 +703,7 @@ canvas {
   border-bottom: 1px solid #282928;
   border-right: 1px solid #282928;
   min-height: 25vh;
+  min-width: 25%;
 }
 .number_card .num {
   font-size: 40px;
@@ -780,6 +783,15 @@ canvas {
   border-right: 1px solid #282928;
   border-bottom: 1px solid #282928;
   min-height: 25vh;
+  min-width: 25%;
+}
+.metodo_card:hover {
+  background: #282928 !important;
+  color: #F3F1E4 !important;
+}
+.metodo_card:hover .metodo_count {
+  background: #F3F1E4;
+  color: #282928;
 }
 .metodo_card img {
   position: absolute;
@@ -844,6 +856,12 @@ canvas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.infografica .star {
+  opacity: 0;
 }
 .infografica img, .infografica svg {
   min-width: 100%;
@@ -1011,13 +1029,32 @@ canvas {
   padding: 144px 8px;
   position: relative;
 }
-.modal .modal_container .text_container .col_left h3 {
+.modal .modal_container .text_container .col_left h4 {
   position: absolute;
   top: 48px;
+  font-size: 12px;
   left: 16px;
+}
+.modal .modal_container .text_container .col_left h4:after {
+  content: none;
+}
+.modal .modal_container .text_container .col_left h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .modal .modal_container .text_container .col_left h3:after {
   content: none;
+}
+.modal .modal_container .text_container .col_left h3 svg {
+  margin-left: 16px;
+  margin-right: -25px;
 }
 .modal .modal_container .text_container .col_right {
   background: #F3F1E4;
@@ -1377,6 +1414,9 @@ canvas {
   .modal .modal_container .text_container .col_left .modal_header h4 {
     font-size: 11px;
     margin-right: 8px;
+    position: relative;
+    top: unset;
+    left: unset;
   }
   .modal .modal_container .text_container .col_left .modal_header h3 {
     position: relative;
