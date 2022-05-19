@@ -860,7 +860,7 @@ canvas {
   height: -moz-fit-content;
   height: fit-content;
 }
-.infografica .star {
+.infografica .star, .infografica .icon {
   opacity: 0;
 }
 .infografica img, .infografica svg {
