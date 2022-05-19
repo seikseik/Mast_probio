@@ -507,7 +507,7 @@ canvas{
   border-bottom:1px solid $black;
   display: flex;
   height: fit-content;
-  .star{
+  .star, .icon{
     opacity: 0;
   }
   img, svg{

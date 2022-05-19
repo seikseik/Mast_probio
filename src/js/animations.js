@@ -53,6 +53,27 @@ ScrollTrigger.batch(batteri, {
 });
 
 
+const icona = gsap.utils.toArray(".icon");
+
+ScrollTrigger.batch(icona, {
+  onEnter: elements => {
+    gsap.fromTo(elements, {
+      rotate: 20,
+      scale: 0.4,
+      transformOrigin:"50% 50%"         // make transform origin be center for x and y axis
+      }, {
+        rotate: 0,
+        scale: 1,
+        opacity: 1,
+        stagger: 0.009,
+        duration: 0.8,
+        delay: 0.4,
+        ease: "ease"
+    });
+  },
+  once: true
+});
+
 
 
 // // fade up
