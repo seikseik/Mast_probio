@@ -7,6 +7,8 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 Marquee3k.init()
 
+
+
 var modal = document.getElementById("myModal");
 
 var btn = document.getElementById("myBtn");
@@ -28,16 +30,6 @@ window.onclick = function(event) {
 }
 
 
-// let batteri = document.querySelectorAll(".star")
-// batteri.forEach((el, i) => {
-//   const anim = gsap.fromTo(el, {rotate: () => Math.random() * 40 }, {duration: 0.5, rotate: 0, autoAlpha: 1, stagger: 0.008,});
-//   ScrollTrigger.create({
-//     trigger: el,
-//     animation: anim,
-//     toggleActions: 'play none none none',
-//     once: true,
-//   });
-// });
 
 const batteri = gsap.utils.toArray(".star");
 
@@ -45,14 +37,15 @@ ScrollTrigger.batch(batteri, {
   onEnter: elements => {
     gsap.fromTo(elements, {
       rotate: 20,
-      scale: 0.5,
+      scale: 0.4,
       transformOrigin:"50% 50%"         // make transform origin be center for x and y axis
       }, {
         rotate: 0,
         scale: 1,
         opacity: 1,
-        stagger: 0.008,
-        duration: 0.6,
+        stagger: 0.009,
+        duration: 0.8,
+        delay: 0.4,
         ease: "ease"
     });
   },

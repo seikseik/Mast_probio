@@ -337,9 +337,6 @@ canvas {
 .hero_container .hero_text .hero_description {
   line-height: 1.6;
 }
-.hero_container .hero_text .hero_description a {
-  color: #50B29B;
-}
 .hero_container .hero_text .hero_description span {
   font-weight: 600;
   white-space: nowrap;
@@ -363,6 +360,9 @@ canvas {
   font-family: "Mattone", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
+}
+.hero_container .hero_text .hero_description .sub-desc span {
+  color: #50B29B;
 }
 .hero_container .hero_text {
   width: calc(66.66vw - 5px);
@@ -866,7 +866,7 @@ canvas {
 .infografica img, .infografica svg {
   min-width: 100%;
   height: auto;
-  padding: 0 4vw;
+  padding: 0 1.5vw;
 }
 
 .section_split {
@@ -963,6 +963,9 @@ canvas {
 }
 .section_marquee .marquee_text_container .marquee_text p:not(:last-child) {
   margin-bottom: 24px;
+}
+.section_marquee .marquee_text_container .marquee_text a {
+  color: #50B29B;
 }
 .section_marquee .col_green {
   width: 20%;
@@ -1109,6 +1112,9 @@ canvas {
 .footer_top .footer_col .footer_col_content a {
   color: #282928;
 }
+.footer_top .footer_col .footer_col_content img {
+  width: 170px;
+}
 .footer_top .footer_col:first-child {
   text-align: left;
 }
@@ -1170,10 +1176,6 @@ canvas {
   .after:after {
     right: -8px;
     width: 8px;
-  }
-
-  .number_card:after {
-    content: none;
   }
 
   .hero_container .hero_text .hero_description .arrow_row {

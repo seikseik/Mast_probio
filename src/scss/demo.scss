@@ -115,10 +115,10 @@ canvas{
     }
     .hero_description{
       line-height: 1.6;
-      a{color: $verde;}
       span{font-weight: 600; white-space: nowrap; line-height: normal; margin-left: $spacing/2;}
       .arrow_row{display: flex;align-items: center; margin: $spacing; img{margin-right: $spacing;}}
       .sub-desc{
+        span{color: $verde;}
         margin-top: $space;
         font-family: $mat;
         text-transform: uppercase;
@@ -513,7 +513,7 @@ canvas{
   img, svg{
     min-width: 100%;
     height: auto;
-    padding: 0 4vw
+    padding: 0 1.5vw;
   }
 
 }
@@ -592,6 +592,7 @@ canvas{
       width: 900px;
       max-width: 100%;
       p:not(:last-child){margin-bottom: $spacing*3;}
+      a{color:$verde;}
     }
   }
   .col_green{
@@ -710,6 +711,9 @@ canvas{
       @include heading;
       font-size: $size_text;
       a{color:$black;}
+      img{
+        width:170px;
+      }
     }
     &:first-child{
       text-align: left;
@@ -765,13 +769,12 @@ canvas{
     display: flex;
   }
 
-
   .after:after{
     right: -$spacing;
     width:$spacing;
   }
   .number_card:after{
-    content: none;
+
   }
 
   .hero_container .hero_text .hero_description .arrow_row{
