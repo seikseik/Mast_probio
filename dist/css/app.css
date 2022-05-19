@@ -1388,11 +1388,11 @@ canvas {
     border-right: 1px solid #282928;
   }
   .modal .modal_container .close {
-    top: 25px;
+    top: 5px;
     z-index: 10;
   }
   .modal .modal_container .close svg {
-    width: 110px;
+    width: 100px;
   }
   .modal .modal_container .text_container {
     -webkit-box-orient: vertical;
